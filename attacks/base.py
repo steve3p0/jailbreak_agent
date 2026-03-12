@@ -31,7 +31,7 @@ class AttackResult:
             lines += [f"{'-'*70}", f"RESPONSE:\n{self.response}"]
         lines += [
             f"{'-'*70}",
-            f"Success: {'YES [PASS]' if self.success else 'NO [not run]'}",
+            f"Attack succeeded: {'YES — jailbreak worked' if self.success else ('NO — agent defended' if self.response else 'not run')}",
             f"Notes  : {self.notes}",
             f"{'='*70}",
         ]
